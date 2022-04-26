@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
+// fichero de rutas principales
+import { AppRoutingModule } from './app-routing.module';
+
+
 import { AppComponent } from './app.component';
 import { MenuComponent } from './shared/menu/menu.component';
 import { HomeComponent } from './home/home.component';
@@ -16,8 +21,9 @@ import { PipesModule } from './pipes/pipes.module';
     HomeComponent
   ],
   imports: [
-    AppRoutingModule,
+   
     BrowserModule,
+    AppRoutingModule,
     ClientesModule,
     TemarioModule,
     PipesModule
@@ -26,5 +32,4 @@ import { PipesModule } from './pipes/pipes.module';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-export class AppRoutingModule {}
 

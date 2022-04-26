@@ -4,7 +4,7 @@ import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
 {
-    path: 'home'
+    path: 'home',
     component: HomeComponent
 },
 {
@@ -30,7 +30,9 @@ const routes: Routes = [
 
 ]
 
-@NgModule({
 
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule ]
 })
 export class AppRoutingModule{}
