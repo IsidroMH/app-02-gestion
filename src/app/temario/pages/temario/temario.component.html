@@ -1,3 +1,20 @@
-<h1> Temas del curso de Angular 2022</h1>
+
+<h1>Temas del curso de Angular 2022</h1>
 <hr>
 
+<div class="row row-cols-1 row-cols-md-2 g-4">
+
+
+    <div class="col" *ngFor="let cadaTema of temario">
+
+      <app-tarjeta 
+          [miTema]="cadaTema"
+          [mostrarImg]="true"
+          (meGustaEmiter)="eventoDesdeElComponenteHijo( $event )"
+      ></app-tarjeta>
+
+
+    </div>
+
+ 
+  </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { TEMARIO } from '../../data/data-temas';
 
-
+import { Tema } from '../../interfaces/temas-interface';
 
 @Component({
   selector: 'app-temario',
@@ -10,9 +10,19 @@ import { CommonModule } from '@angular/common';
 })
 export class TemarioComponent implements OnInit {
 
+  temario: Tema[] = [];
+
+
   constructor() { }
 
   ngOnInit(): void {
+    this.temario = TEMARIO
+    console.log( this.temario );
   }
 
+  eventoDesdeElComponenteHijo( evento: number ) {
+    console.log('Se ha producido un evento desde el componente hijo: ', evento );
+  }
+
+  
 }

@@ -27,6 +27,11 @@ const routes: Routes = [
     path: 'paises',
     loadChildren: ()=> import('./paises/paises.module').then(m=>m.PaisesModule)
 }
+,
+{
+    path: '**',
+    redirectTo: 'home'   
+}
 
 ]
 

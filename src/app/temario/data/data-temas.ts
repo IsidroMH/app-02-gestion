@@ -1,5 +1,9 @@
 //Array de tipo Tema
+
+import {Tema} from '../interfaces/temas-interface';
 export const TEMARIO: Tema[] = [
+
+
             {
                     titulo: 'Estructura',
                     contenido: 'Estructura de una aplicación angular',

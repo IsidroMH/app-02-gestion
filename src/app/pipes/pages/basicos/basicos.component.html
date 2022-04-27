@@ -1,1 +1,62 @@
-<p>basicos works!</p>
+<table class="table">
+
+   <thead>
+       <tr>
+           <th> Pipe </th>
+           <th> Valor </th>
+           <th> Resultado </th>
+       </tr>
+   </thead> 
+
+   <tbody>
+
+  
+        <tr>
+           <td> lowercase </td>
+           <td> {{ nombre }} </td>
+           <td> {{ nombre | uppercase }} </td>
+       </tr>
+
+       <tr>
+        <td> uppercase </td>
+        <td> {{ nombre }} </td>
+        <td> {{ nombre | lowercase }} </td>
+
+    </tr>
+
+    <tr>
+        <td> tittlecase </td>
+        <td> {{ nombre }} </td>
+        <td> {{ nombre | lowercase }} </td>
+
+    </tr>
+
+    <tr>
+        <td> decimal </td>
+        <td> {{ precio }} </td>
+        <td> {{ precio | number: '.1-2' }} </td>
+
+    </tr>
+
+    <tr>
+        <td> currency </td>
+        <td> {{ precio }} </td>
+        <td> {{ precio | currency }} </td>
+
+    </tr>
+    <tr>
+        <td> fecha </td>
+        <td> {{ fecha }} </td>
+        <td> {{ fecha | date:'fullDate' }} </td>
+
+    </tr>
+    <tr>
+        <td> Alrevés </td>
+        <td> {{ nombre }} </td>
+        <td> {{ nombre | alreves }} </td>
+
+    </tr>
+
+    </tbody>
+
+</table>
