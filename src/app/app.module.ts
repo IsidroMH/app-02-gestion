@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { ClientesModule } from './clientes/clientes.module';
 import { TemarioModule } from './temario/temario.module';
 import { PipesModule } from './pipes/pipes.module';
+import { PaisesModule } from './paises/paises.module';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { PipesModule } from './pipes/pipes.module';
     AppRoutingModule,
     ClientesModule,
     TemarioModule,
-    PipesModule
+    PipesModule,
+    PaisesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

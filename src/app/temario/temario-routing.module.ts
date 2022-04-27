@@ -7,15 +7,11 @@ const routes: Routes = [
 path: '',
 children: [
   {
-    path: 'basico',
+    path: 'listado',
     component: TemarioComponent
   }
   ,
-  {
-    path: 'avanzado',
-    component: TemarioComponent
-  }
-  ,
+  
   {
     path: '**',
     redirectTo: 'listado'
