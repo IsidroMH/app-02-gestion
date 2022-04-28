@@ -1,25 +1,27 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit } from '@angular/core';
+import { Country } from '../../interfaces/pais.interface';
+import { PaisesService } from '../../services/paises.service';
 
-import { PaisesComponent } from './paises.component';
+@Component({
+  selector: 'app-paises',
+  templateUrl: './paises.component.html',
+  styleUrls: ['./paises.component.css']
+})
+export class PaisesComponent implements OnInit {
 
-describe('PaisesComponent', () => {
-  let component: PaisesComponent;
-  let fixture: ComponentFixture<PaisesComponent>;
+  paises: Country[] = [];
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ PaisesComponent ]
+  constructor(private paisesService: PaisesService) { }
+
+  ngOnInit(): void {
+    this.obtenerPaises();
+  }
+
+  obtenerPaises() {
+    this.paisesService.getPaises().subscribe( respPaises => {
+      console.log( respPaises[3].capital );
+      this.paises = respPaises;
     })
-    .compileComponents();
-  });
+  }
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(PaisesComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+}
